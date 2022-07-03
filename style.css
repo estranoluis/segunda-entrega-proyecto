@@ -1254,6 +1254,7 @@ h5 {
   width: 327px;
   margin-top: 15px;
   position: relative;
+  left: 5px;
 }
 
 .product-price-btn p {
@@ -1274,7 +1275,7 @@ span {
   font-family: 'Suranna', serif;
   font-size: 30px;
   margin-top: 15px;
-  margin-left: 8px;
+
 }
 
 .product-price-btn button {
