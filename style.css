@@ -31,7 +31,7 @@
 }
 
 /* Probando media query */
-@media screen and (max-width: 468px) {
+@media screen and (max-width: 576px) {
 
   body {
     font-size: 90%;
@@ -50,6 +50,48 @@
     grid-column: 1/-1;
   }
 
+  .grid-home .cuerpo__parrafo {
+    display: none;
+  }
+
+  .grid-home .boton-compra {
+    display: flex;
+    justify-content: center;
+    line-height: 20px;
+    font-family: 'Bebas Neue';
+    text-decoration: none;
+    margin: 0% 1% 0% 1%;
+    padding: 1% 0% 1% 0%;
+    font-size: 130%;
+    color: rgb(202, 198, 198);
+  }
+
+  .boton-compra-item {
+    line-height: 20px;
+    font-family: 'Bebas Neue';
+    text-align: center;
+    text-decoration: none;
+    margin: 0% 1% 0% 1%;
+    padding: 1% 0% 1% 0%;
+    color: rgb(202, 198, 198);
+  }
+  
+  .boton-compra-item:hover {
+    font-size: x-large;
+    color: rgb(187, 191, 72);
+    animation: comprar 0.5s  0s 0.5 normal forwards;
+  }
+  
+  @keyframes comprar {
+    0% {
+      transform: scale(1);
+    }
+  
+    100% {
+      transform: scale(1.1);
+    }
+  }
+  
   .grid-home #portada {
     grid-column: 1/-1;
   }
@@ -92,6 +134,21 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .grid-home .cuerpo__parrafo__titulo {
+    font-size: large;
+  }
+  .cuerpo__parrafo__texto {
+    display: none;
+  }
+
+  .grid-home .cuerpo__parrafo__item:hover {
+    font-size: xx-large;
+    color: rgb(187, 191, 72);
+  }
+
+}
+
 /* Header */
 
 #cabecera {
@@ -125,7 +182,6 @@
   animation-direction: normal;
   animation-fill-mode: forwards;
   animation-play-state: initial;
-
 }
 
 @keyframes logoAnimation {
@@ -151,11 +207,13 @@
 #navbarDropdown, .nav-item, .nav-link, .navbar-nav {
   color: white;
   font-weight: bold;
+  font-size: 100%;
 }
 
 .dropdown-item, .navbar-toggler  {
   color:#345bb3;
   font-weight: bold;
+  font-size: 100%;
 }
 
 .btn{
@@ -163,9 +221,10 @@
   background-color: #209bf1;
   border-color: #0a7bcb;
   font-weight: bold;
+  font-size: 100%;
 }
 
-/* Slide de fotos con animación */
+/* Slide de fotos con animación con bootstrap */
 
 #carouselFade {
   width: inherit;
@@ -175,6 +234,7 @@
   grid-area: slider;
 }
 
+/* Ejemplo de slide sin bootstrap */
 /* .slider {
   width: 100%;
   height: auto;
@@ -258,7 +318,7 @@
 /* Publicidad con video y enlace a compra */
 
 #cuerpo {
-  margin-top: 1%;
+
   max-width: 100%;
   height: auto;
   display: grid;
@@ -279,31 +339,47 @@
 }
 
 .cuerpo__parrafo {
-  line-height: 25px;
   font-family: 'Bebas Neue';
   text-align: center;
   margin: 0% 1% 0% 1%;
-  padding: 1% 0% 1% 0%;
-  font-size: 120%;
 }
 
-.cuerpo__parrafo__titulo{
-  line-height: 33px;
+.cuerpo__parrafo__titulo {
+  font-size: xx-large;
+}
+
+.cuerpo__parrafo__texto {
+  font-size: large;
 }
 
 .cuerpo__parrafo__item {
-  line-height: 25px;
+  font-size: xx-large;
+  line-height: 30px;
   font-family: 'Bebas Neue';
   text-align: center;
   text-decoration: none;
   margin: 0% 1% 0% 1%;
   padding: 1% 0% 1% 0%;
-  font-size: 180%;
   color: rgb(202, 198, 198);
 }
 
 .cuerpo__parrafo__item:hover {
   color: rgb(187, 191, 72);
+  animation: compra 0.5s  0s 0.5 normal forwards;
+}
+
+@keyframes compra {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.boton-compra {
+  display: none;
 }
 
 .cuerpo__video {
@@ -669,6 +745,7 @@ h6 span {
 
 .login {
   background-color: #4f4d6f;
+  padding: 3% 5% 3% 5%;
   margin-top: 1%;
   margin-bottom: 1%;
   justify-content: center;
@@ -683,6 +760,7 @@ h6 span {
   box-shadow: 0 0 25px -15px rgba(0,0,0,0.3);
   position: relative;
 }
+
 .form-container:before,
 .form-container:after{
   content: '';
@@ -700,10 +778,10 @@ h6 span {
   right: 10px;
 }
 .form-container .title{
+  text-align: center;
   color: white;
   font-size: 25px;
   font-weight: 700;
-  text-transform: capitalize;
   margin: 0 0 15px;
 }
 .form-container .social-links{
@@ -1176,6 +1254,7 @@ h5 {
   width: 327px;
   margin-top: 15px;
   position: relative;
+  left: 5px;
 }
 
 .product-price-btn p {
@@ -1195,8 +1274,8 @@ span {
   height: 50px;
   font-family: 'Suranna', serif;
   font-size: 30px;
-  margin-top: 7px;
-  margin-left: 8px;
+  margin-top: 15px;
+
 }
 
 .product-price-btn button {
